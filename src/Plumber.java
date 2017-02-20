@@ -60,7 +60,6 @@ public class Plumber {
                 try {
                     sdf.parse(date);
                     one = false;
-                    break;
                 } catch (ParseException e) {
                     System.out.print("Please enter a valid date in (mm/dd/yyyy) format: ");
                     date = sc.nextLine();
@@ -78,7 +77,6 @@ public class Plumber {
                 try {
                     time.parse(start);
                     two = false;
-                    break;
                 } catch (ParseException e) {
                     System.out.print("Please try again (hours:minutes) > ");
                     start = sc.nextLine();
@@ -95,11 +93,10 @@ public class Plumber {
 
             //see if it's an actual time
             boolean three = true;
-            while (three == true) {
+            while (three) {
                 try {
                     time.parse(end);
                     three = false;
-                    break;
                 } catch (ParseException e) {
                     System.out.print("Please try again (hours:minutes) > ");
                     end = scan.nextLine();
@@ -253,7 +250,7 @@ public class Plumber {
                 System.out.println("\t\t\tThank you for your business.");}
             else {System.out.println("\n");}
         }
-
+        //test
 
     }
 }
